@@ -7,6 +7,39 @@ namespace GuildedRose.Inventory.Spec.Update
     public class NormalDayUpdaterSpec
     {
         [Fact]
+        public void SellByDateNotPassed_SellIn_LowersValueByOne()
+        {
+            var input = new Item(string.Empty, 5, 2);
+
+            var day = new NormalDayUpdater();
+            var result = day.Add(input);
+
+            Assert.Equal(input.SellIn - 1, result.SellIn);
+        }
+
+        [Fact]
+        public void OnSellByDate_SellIn_LowersValueByOne()
+        {
+            var input = new Item(string.Empty, 0, 2);
+
+            var day = new NormalDayUpdater();
+            var result = day.Add(input);
+
+            Assert.Equal(input.SellIn - 1, result.SellIn);
+        }
+
+        [Fact]
+        public void SellByDateHasPassed_SellIn_LowersValueByTwo()
+        {
+            var input = new Item(string.Empty, -1, 2);
+
+            var day = new NormalDayUpdater();
+            var result = day.Add(input);
+
+            Assert.Equal(input.SellIn - 1, result.SellIn);
+        }
+
+        [Fact]
         public void SellByDateNotPassed_Quality_LowersValueByOne()
         {
             var input = new Item(string.Empty, 5, 2);

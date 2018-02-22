@@ -9,8 +9,12 @@ namespace GuildedRose.Inventory.Update
                 case "Aged Brie":
                     return new AgedBrieDayUpdater();
                 break;
-                default:
+                case "Backstage passes":
+                    return new BackstagePassesDayUpdater();
+                case "Normal Item":
                     return new NormalDayUpdater();
+                default:
+                    return null;
             }
         }
     }
