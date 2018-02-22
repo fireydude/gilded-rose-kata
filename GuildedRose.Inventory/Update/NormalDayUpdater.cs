@@ -15,6 +15,10 @@ namespace GuildedRose.Inventory.Update
             {
                 newQuality = 0;
             }
+            else if(newQuality > 50)
+            {
+                newQuality = 50;
+            }
             return new Item(item.Name, item.SellIn - 1, newQuality);
         }
     }
