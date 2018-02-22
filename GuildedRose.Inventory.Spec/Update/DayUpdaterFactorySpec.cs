@@ -44,5 +44,15 @@ namespace GuildedRose.Inventory.Spec.Update
 
             Assert.IsType<NormalDayUpdater>(result);
         }
+
+        [Fact]
+        public void GetDayUpdater_CreatesSulfuras()
+        {
+            var target = new DayUpdaterFactory();
+
+            var result = target.GetDayUpdater("Sulfuras");
+
+            Assert.IsType<SulfurasUpdater>(result);
+        }
     }
 }

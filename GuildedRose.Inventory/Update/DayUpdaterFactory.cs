@@ -13,6 +13,8 @@ namespace GuildedRose.Inventory.Update
                     return new BackstagePassesDayUpdater();
                 case "Normal Item":
                     return new NormalDayUpdater();
+                case "Sulfuras":
+                    return new SulfurasUpdater();
                 default:
                     return null;
             }
