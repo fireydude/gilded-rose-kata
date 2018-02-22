@@ -16,8 +16,9 @@ namespace GuildedRose.Inventory
 
                 foreach(var item in items)
                 {
-                    var dayAdder = new NormalDayUpdater();
-                    var updatedItem = dayAdder.Add(item);
+                    var factory = new DayUpdaterFactory();
+                    var updateStrategy = factory.GetDayUpdater(item.Name);
+                    var updatedItem = updateStrategy.Add(item);
                     Console.WriteLine($"{updatedItem.Name} {updatedItem.SellIn} {updatedItem.Quality}");
                 }
             }

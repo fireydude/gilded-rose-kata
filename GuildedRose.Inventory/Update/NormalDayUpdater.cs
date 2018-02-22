@@ -2,11 +2,14 @@ using GuildedRose.Inventory.Models;
 
 namespace GuildedRose.Inventory.Update
 {
-    public class NormalDayUpdater
+    public class NormalDayUpdater : IDayUpdater
     {
-        public Item Add(Item item)
+        protected int QualityDegrade = 1;
+        protected int QualityDegradeAfterSellBy = 2;
+        
+        public virtual Item Add(Item item)
         {
-            var degradeAmount = item.SellIn < 0 ? 2 : 1;
+            var degradeAmount = item.SellIn < 0 ? QualityDegradeAfterSellBy : QualityDegrade;
             var newQuality = item.Quality - degradeAmount;
             if(newQuality < 0)
             {
