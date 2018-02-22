@@ -15,6 +15,8 @@ namespace GuildedRose.Inventory.Update
                     return new NormalDayUpdater();
                 case "Sulfuras":
                     return new SulfurasUpdater();
+                case "Conjured":
+                    return new ConjuredUpdater();
                 default:
                     return null;
             }

@@ -54,5 +54,15 @@ namespace GuildedRose.Inventory.Spec.Update
 
             Assert.IsType<SulfurasUpdater>(result);
         }
+
+        [Fact]
+        public void GetDayUpdater_CreatesConjured()
+        {
+            var target = new DayUpdaterFactory();
+
+            var result = target.GetDayUpdater("Conjured");
+
+            Assert.IsType<ConjuredUpdater>(result);
+        }
     }
 }
