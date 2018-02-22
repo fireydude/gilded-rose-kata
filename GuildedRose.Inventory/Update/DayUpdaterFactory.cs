@@ -8,7 +8,6 @@ namespace GuildedRose.Inventory.Update
             {
                 case "Aged Brie":
                     return new AgedBrieDayUpdater();
-                break;
                 case "Backstage passes":
                     return new BackstagePassesDayUpdater();
                 case "Normal Item":
