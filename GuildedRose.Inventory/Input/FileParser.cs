@@ -17,7 +17,6 @@ namespace GuildedRose.Inventory.Input
                 var day = int.Parse(GetLastItem(ref remainingLine));
                 var name = remainingLine;
 
-                Console.WriteLine($"'{name}' '{day}' '{quality}'");
                 yield return new Item(name, day, quality);
             }
         }
