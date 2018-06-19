@@ -19,3 +19,8 @@ Run this command from the route of this repository.
 > dotnet test GuildedRose.Inventory.Spec/GuildedRose.Inventory.Spec.csproj
 
 You may also need to install the C# extension for [Visual Studio Code](https://code.visualstudio.com/download) in order to run the tests.
+
+## Test Coverage
+Produce a coverage report but executing `run-tests.cmd`.  For a better development experience, you can watch for changes by running `run-tests-watcher.cmd`. [This is only](https://www.hanselman.com/blog/AutomaticUnitTestingInNETCorePlusCodeCoverageInVisualStudioCode.aspx) available with the new dotnet SDK (2.1).
+### VS Code Extension - Coverage Gutters
+This plugin can be used to view coverage, right-click on the file and select Display Coverage from the context menu.

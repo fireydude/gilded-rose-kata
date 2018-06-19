@@ -2,3 +2,4 @@
 /GuildedRose.Inventory/obj/**
 /GuildedRose.Inventory.Spec/bin/**
 /GuildedRose.Inventory.Spec/obj/**
+GuildedRose.Inventory.Spec/lcov.info
